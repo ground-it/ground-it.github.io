@@ -1,0 +1,212 @@
+header {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    * {
+        transition: .3s;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+
+        a#logo {
+            z-index: 100;
+
+        }
+
+        .burger {
+            width: 87px;
+            height: 74px;
+            border: 1px solid $button-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            margin-right: 10px;
+
+            span {
+                width: 54px;
+                height: 3px;
+                background: $button-color;
+
+                &:nth-child(2) {
+                    margin: 14px 0;
+                }
+            }
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(100vw);
+        width: 100%;
+        height: 100vh;
+        background: $menu-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 50;
+        transition: .5s ease;
+
+        ul {
+            li {
+                text-align: center;
+                margin: 10px 0;
+
+                &:hover {
+                    transform: translateX(-15px);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $p-main-color;
+                    font-size: $p-size;
+                    font-family: 'Rubik-Regular';
+
+                    &:hover {
+                        color: $title-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+    //classes to toggle menu
+    .menu-active {
+        transform: translateX(0);
+    }
+
+    .burger-active {
+        border: 0;
+
+        span {
+            margin-left: 34px;
+
+            &:nth-child(1) {
+                transform: rotate(45deg) translateY(24px);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translateY(-24px);
+            }
+        }
+    }
+}
+
+//this class will be aded to HEADER after some scroll via JS
+.scrolled {
+    // background: $menu-bg;
+    // padding: 10px 0;
+    .container {
+        a#logo {
+            // transform: translateX(-300px);
+            opacity: 0;
+
+        }
+        .burger {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: $menu-bg;
+            border: 0;
+            box-shadow: 0 0 5px lighten($menu-bg, 10%);
+            span {
+                width: 35px;
+                background: lighten($menu-bg, 30%);
+                &:nth-child(2) {
+                    margin: 7px 0;
+                }
+            }
+        }
+
+    }
+
+    .burger-active {
+        border: 0;
+
+        span {
+            margin-left: 21px;
+
+            &:nth-child(1) {
+                transform: rotate(45deg) translateY(14px);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translateY(-14px);
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    header {
+        padding: 15px 0;
+
+        .container {
+            .burger {
+                width: 60px;
+                height: 47px;
+
+                span {
+                    width: 35px;
+
+                    &:nth-child(2) {
+                        margin: 7px 0;
+                    }
+                }
+            }
+
+            #logo {
+                img {
+                    max-width: 150px;
+                }
+            }
+        }
+
+        .burger-active {
+            span {
+                margin-left: 19px !important;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg) translateY(14px);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translateY(-14px);
+                }
+            }
+        }
+    }
+
+    .menu {
+        ul {
+            li {
+                a {
+                    font-size: 23px !important;
+                }
+            }
+        }
+    }
+}

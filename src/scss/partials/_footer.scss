@@ -1,0 +1,192 @@
+footer {
+    background: $menu-bg;
+
+    .container {
+        padding: 55px 0;
+
+        .row {
+            justify-content: space-between;
+
+            .col-lg-4:nth-child(1) {
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    input {
+                        max-width: 435px;
+                        width: 100%;
+                        border: 4px solid $title-color;
+                        padding: 20px;
+                        background: transparent;
+                        border-radius: 15px;
+                        font-family: 'Rubik-Regular';
+                        font-size: 20px;
+                        outline: none;
+
+                        &[type="text"] {
+                            font-family: 'Rubik-Regular';
+                            font-size: 20px;
+                            color: #ffffff;
+                        }
+
+                        &:nth-child(2) {
+                            margin-top: 60px;
+                        }
+                    }
+
+                    select {
+                        border: 3px solid $title-color;
+                        padding: 20px;
+                        background: transparent;
+                        border-radius: 15px;
+                        font-family: 'Rubik-Regular';
+                        font-size: 20px;
+                        outline: none;
+                        color: $p-third-color;
+                        margin-top: 60px;
+                        max-width: 435px;
+                        width: 100%;
+
+                        option {
+                            background: $footer-bg;
+                            border: 3px solid $title-color;
+                            color: $p-main-color;
+                            font-family: 'Rubik-Regular';
+                            font-size: 20px;
+                            outline: none;
+                        }
+                    }
+
+                    button {
+                        margin-top: 60px;
+                        max-width: 268px;
+                        background: $title-color;
+                        border: 3px solid $title-color;
+                        color: $p-main-color;
+                        border-radius: 15px;
+                        padding: 15px 30px;
+                        font-size: 20px;
+                        font-family: 'Rubik-Medium';
+                        outline: none;
+                        &:hover {
+                            background: transparent;
+                            color: $title-color
+                        }
+                    }
+                }
+            }
+
+            .col-lg-4:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                .phone {
+                    color: $title-color;
+                    font-family: 'Rubik-Medium';
+                    font-size: 33px;
+                    text-decoration: none;
+                }
+
+                .mail {
+                    color: $title-color;
+                    font-family: 'Rubik-Medium';
+                    font-size: 30px;
+                    text-decoration: none;
+                }
+
+                .social {
+                    max-width: 264px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            transition: .3s;
+                            &:hover {
+                                transform: scale(1.1) translateY(-10px);
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    color: $p-third-color;
+                    font-family: 'Rubik-Regular';
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:1200px) {
+    footer {
+        .container {
+            .row {
+                .col-lg-4:nth-child(2) {
+                    .phone {
+                        font-size: 25px;
+                    }
+
+                    .mail {
+                        font-size: 23px;
+                    }
+
+                    .social {
+                        max-width: 150px;
+
+                        a {
+                            img {
+                                width: 35px;
+                                height: 35px;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:992px) {
+    footer {
+        .container {
+            .row {
+                .col-lg-4 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center !important;
+                    input,
+                    button,
+                    select {
+                        margin: 20px 0 !important;
+                        max-width: 100% !important;
+                    }
+                    input:nth-child(1) {
+                        margin-top: 0 !important;
+                    }
+                }
+                .col-lg-4:nth-child(2) {
+                    a,
+                    .social,
+                    p {
+                        margin: 20px 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

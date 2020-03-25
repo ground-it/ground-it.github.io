@@ -1,0 +1,67 @@
+/* main scss file */
+
+// utils, mxins, basic definitions
+@import "utils/utils";
+
+// Components and Layout
+@import "partials/component";
+
+// Third-party overwrites...
+
+
+* {
+    font-family: 'Rubik-Regular';
+    // transition: .3s;
+}
+
+body {
+    @include container-lines;
+    background-color: $section-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-family: "Russo-Regular";
+    color: $title-color;
+}
+
+h1 {
+    font-size: $h1-size;
+}
+
+h2 {
+    font-size: $h2-size;
+    // &::after {
+    // content: '';
+    // display: flex;
+    // margin: 35px auto 15px auto;
+    // height: 3px;
+    // width: 200px;
+    // background: $title-color;
+    // }
+}
+
+h3 {
+    font-size: $h3-size;
+}
+
+section {
+    z-index: 1;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+//adding vertical lines to container
+@media (min-width: 575px) {
+    .container {
+        background-size: cover !important;
+    }
+}

@@ -1,0 +1,28 @@
+.toTopBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: lighten($menu-bg, 10%);
+    box-shadow: 0 0 5px $menu-bg;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: .3s;
+    z-index: 20;
+    a {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.toTopBtn-active {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,33 @@
+#section1 {
+    height: 100vh;
+    background: url('./../assets/img/section1/bg.jpg') no-repeat center;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .row {
+            .col-lg-5 {
+                h1 {
+                    color: $main-font-color;
+
+                }
+
+                p {
+                    margin: 28px 0 100px 0;
+                    font-size: $p-size;
+                    color: $p-third-color;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $main-font-color;
+                    padding: 21px 34px;
+                    background: $title-color;
+                    font-family: 'Russo-Regular';
+                }
+            }
+        }
+    }
+}

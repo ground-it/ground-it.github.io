@@ -1,0 +1,75 @@
+#section5 {
+    background: $main-bg;
+    * {
+        transition: .3s;
+    }
+    .container {
+        padding: 55px 0;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .row {
+            .col-12 {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .project-item {
+                    max-width: 380px;
+                    border: 1px solid $main-bg;
+                    height: 217px;
+                    width: 100%;
+                    background: transparent;
+                    position: relative;
+                    margin: auto;
+                    &:hover {
+                        a {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                        img {
+                            filter: brightness(50%);
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    a {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background: $title-color;
+                        padding: 15px 30px;
+                        color: $p-main-color;
+                        font-size: 20px;
+                        text-decoration: none;
+                        font-family: 'Rubik-Medium';
+                        opacity: 0;
+                        transform: translateX(10px);
+                    }
+                }
+            }
+
+            .button {
+                background: $main-bg;
+                border: 3px solid $title-color;
+                color: $title-color;
+                padding: 15px 30px;
+                font-size: 20px;
+                font-family: 'Rubik-Medium';
+                margin: 55px auto 0 auto;
+
+                &:hover {
+                    background: $title-color;
+                    color: $p-main-color;
+                }
+            }
+        }
+    }
+}

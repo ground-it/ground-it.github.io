@@ -1,0 +1,26 @@
+#section7 {
+    .container {
+        padding: 55px 10px;        h2 {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        .row {
+            .col-12 {
+                // display: flex;
+                // justify-content: space-between;
+                // flex-wrap: wrap;
+                .company-item {
+                    max-width: 230px;
+                    width: 100%;
+                    height: 70px;
+                    background: $card-bg;
+                    margin: auto;
+                    transition: .3s;
+                    &:hover {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+        }
+    }
+}
